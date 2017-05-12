@@ -2,6 +2,7 @@ from collections import namedtuple
 
 from .parsers import PARSERS
 
+# Force map to be lazy
 from sys import version_info
 if version_info.major < 3:
     from itertools import imap as map
