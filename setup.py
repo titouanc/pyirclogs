@@ -7,5 +7,5 @@ setup(name='pyirclogs',
       author='iTitou',
       author_email='moiandme@gmail.com',
       license='MIT',
-      packages=['pyirclogs'],
+      packages=['pyirclogs', 'pyirclogs.parsers'],
       zip_safe=False)
