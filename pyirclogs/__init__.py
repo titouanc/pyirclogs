@@ -1,1 +1,1 @@
-from .pyirclogs import parse, parse_file  # noqa
+from .pyirclogs import Message, parse, parse_file  # noqa
