@@ -7,7 +7,8 @@ logger = getLogger(__name__)
 log_opened = re.compile(r'--- Log opened (.+)')
 day_changed = re.compile(r'--- Day changed (.+)')
 nick = '([^ ]+?)_*'
-msg = re.compile(r'(\d{2}):(\d{2}) <(@|\+| )%s> (.*)' % nick)
+modechars = '(@|\+|~|&|%| )'
+msg = re.compile(r'(\d{2}):(\d{2}) <' + modechars + '%s> (.*)' % nick)
 action = re.compile(r'(\d{2}):(\d{2})  \* %s (.*)' % nick)
 
 

@@ -6,8 +6,9 @@ logger = getLogger(__name__)
 
 nick = '([^<-][^ >]+)_*'
 date = '\[(\d{2}:\d{2}(\.\d{2})?)\]'
-msg = re.compile(date + '\s+<(@|\+|)' + nick + '>\s+(.*)')
-action = re.compile(date + '\s+?\*\s+(@|\+|)' + nick + ' (.*)')
+modechars = '(@|\+|~|&|%|)'
+msg = re.compile(date + '\s+<' + modechars + nick + '>\s+(.*)')
+action = re.compile(date + '\s+?\*\s+' + modechars + nick + ' (.*)')
 
 
 def mirc_parser(msg=msg):
